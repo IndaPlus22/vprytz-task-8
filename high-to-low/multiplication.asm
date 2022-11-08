@@ -1,9 +1,13 @@
+# Author: Vilhelm Prytz <vilhelm@prytznet.se> / <vprytz@kth.se>
+
 # int multiply(int a, int b) {
 #     int i, sum = 0;
 #     for (i = 0; i < a; i++)
 #         sum += b;
 #     return sum;
 # }
+
+.globl  main
 
 ##
 # Push value to application stack.
@@ -23,17 +27,9 @@
 	addi	$sp,$sp,4               # increment stack pointer (stack builds "downwards" in memory)
 .end_macro
 
-
+.text
 main:
-	li $t0, 10 # t0 is a constant 10
-	li $t1, 0 # t1 is our counter (i)
-	loop:
-	beq $t1, $t0, end # if t1 == 10 we are done
-	
-	# print output
-	li  $v0, 1                          # set system call code to "print integer"
-	syscall                             # print square of input integer to output stream
-	
-	addi $t1, $t1, 1 # add 1 to t1
-	j loop # jump back to the top
-	end:
+
+
+
+
