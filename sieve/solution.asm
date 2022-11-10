@@ -42,9 +42,9 @@ removeprimesloop:
 	la	$s0, primes	# $s0 address of first element in array
 	beq $t2, $s2, printlist
 	
-	subi $s0, $s0, 8	# this is so stupid
-	mul $t5, $t2, 4
-	add $s0, $s0, $t5	# 
+	subi $s0, $s0, 8	# this is so stupid ††††
+	mul $t5, $t2, 4		# 💀💀💀💀💀💀💀💀💀💀
+	add $s0, $s0, $t5	# 💀💀💀💀💀💀💀💀💀💀
 	
 	move $t4, $t2	# new counter for movemultiple label †
 	removemultiple:
