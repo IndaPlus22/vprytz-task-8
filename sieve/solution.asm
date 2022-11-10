@@ -42,6 +42,9 @@ removeprimesloop:
 	la	$s0, primes	# $s0 address of first element in array
 	beq $t2, $s2, printlist
 	
+	subi $s0, $s0, 2	# this is so stupid
+	add $s0, $s0, $t2	# 
+	
 	move $t4, $t2	# new counter for movemultiple label †
 	removemultiple:
 		add $s0, $s0, $t2	# increment pointer with the int we are on that we want too remooove
